@@ -1,0 +1,29 @@
+# This will be a generic pattern matching algorithm 
+
+# Define your genome which you will search in e.g. Vibrio Cholerae
+Genome = 'ATCAATGATCAACGTAAGCTTCTAAGCATGATCAAGGTGCTCACACAGTTTATCCA
+          CAACCTGAGTGGATGACATCAAGATAGGTCGTTGTATCTCCTTCCTCTCGTACTCT
+          CATGACCACGGAAAGATGATCAAGAGAGGATGATTTCTTGGCCATATCGCAATGAA
+          TACTTGTGACTTGTGCTTCCAATTGACATCTTCAGCGCCATATTGCGCTGGCCAAG
+          GTGACGGAGCGGGATTACGAAAGCATGATCATGGCTGTTGTTCTGTTTATCTTGTT
+          TTGACTGAGACTTGTTAGGATAGACGGTTTTTCATCACTGACTAGCCAAAGCCTTA
+          CTCTGCCTGACATCGACCGTAAATTGATAATGAATTTACATGCTTCCGCGACGATT
+          TACCTCTTGATCATCGATCCGATTGAAGATCTTCAATTGTTAATTCTCTTGCCTCG
+          ACTCATAGCCATGATGAGCTCTTGATCATGTTTCCTTAACCCTCTATTTTTTACGG
+          AAGAATGATCAAGCTGCTGCTCTTGATCATCGTTTC'
+          
+# Define a pattern to search for (or k-mer)
+Pattern = 'CAATTG'
+
+# Define function to search for pattern
+def findPattern(Genome,Pattern):
+  count = 0
+  k = len(Pattern)
+  n = len(Genome)
+  for i in range(n-k+1):
+    if Pattern == Genome[i:i+Pattern]:
+    count += 1
+  return count
+  
+# Print result
+print(findPattern(Genome,Pattern))
