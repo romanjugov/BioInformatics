@@ -29,7 +29,14 @@ def PatternCount(Text, Pattern):                     # function takes 2 args
             count += 1                               # if TRUE, add 1 to the count
     return count                                     # return count
 
-### import sys to read genome line by line ###
-import sys
-lines = sys.stdin.read().splitlines()
-print(FasterSymbolArray(lines[0],lines[1]))
+
+
+
+with open('e_coli.txt') as file:                     # open genome file
+    e_coli = file.read();
+
+array = FasterSymbolArray(e_coli, "C")               # run function to look for 'C'
+
+import matplotlib.pyplot as plt                      # import visualisation tool
+plt.plot(*zip(*sorted(array.items())))               # plot the resulting graph of Cs
+plt.show()
