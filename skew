@@ -2,6 +2,17 @@
 # Useful to find the Ori and identify Forward or Reverse strand
 # G-C (increases) with forward strand, and G-C (decreases) with reverse strand
 
+def MinimumSkew(Genome):                 # takes 1 arg
+    positions = []                       # output variable
+    count = 0                            # set count to 0
+    skew = skew(Genome)                  # call second function to get array of skew values
+    minSkew = min(skew)                  # take the min value of the array
+    for i in skew:                       # for values in skew[i]
+        if i == minSkew:                 # if the value [i] is the minimum value
+            positions.append(count)      # add count to the positions 
+        count +=1                        # increment count by 1
+    return positions                     # return positions
+
 def skew(Genome):          # function takes 1 arg
   n = len(Genome)          # length of genome
   skew = [0]               # set skew to 0
