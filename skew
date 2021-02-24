@@ -19,7 +19,8 @@ def skew(Genome):          # function takes 1 arg
   for i in range(n):       # loop through genome length
     if Genome[i] == "C":   # if C, minus 1
       skew.append(skew[i] - 1)  
-    if Genome[i] == "G":   # if G, add 1
+    elif Genome[i] == "G":   # if G, add 1
       skew.append(skew[i] + 1)
-    else skew.append(skew[i])  # otherwise shift by 1 base
+    else:
+      skew.append(skew[i])  # otherwise shift by 1 base
   return skew                  # return skew
