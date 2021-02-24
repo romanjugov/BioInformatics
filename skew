@@ -1,0 +1,14 @@
+# Algo that will count the skew or difference between G and C 
+# Useful to find the Ori and identify Forward or Reverse strand
+# G-C (increases) with forward strand, and G-C (decreases) with reverse strand
+
+def skew(Genome):          # function takes 1 arg
+  n = len(Genome)          # length of genome
+  skew = [0]               # set skew to 0
+  for i in range(n):       # loop through genome length
+    if Genome[i] == "C":   # if C, minus 1
+      skew.append(skew[i] - 1)  
+    if Genome[i] == "G":   # if G, add 1
+      skew.append(skew[i] + 1)
+    else skew.append(skew[i])  # otherwise shift by 1 base
+  return skew                  # return skew
