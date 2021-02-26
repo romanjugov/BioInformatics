@@ -1,6 +1,6 @@
 # BioInformatics
 
-## A collection of generic algorithmns from the Rosalind problem set
+## A collection of generic algorithms from the Rosalind problem set
 
 Project Description                   | Link
 ------------------------------------- | ---------------------------------------------------------
