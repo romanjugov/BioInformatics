@@ -1,4 +1,3 @@
-# Insert your Count(Motifs) function here.
 def Count(Motifs):
     count = {}                 # initializing the count dictionary
     k = len(Motifs[0])         # k = lenght of the 1st Motif 
@@ -27,8 +26,6 @@ def Consensus(Motifs):
         consensus += frequentSymbol      # add this base to consensus sequence
     return consensus                     # return full consensus sequence
 
-# Input:  A set of kmers Motifs
-# Output: A consensus string of Motifs.
 
 def Score(Motifs):                      
     consensus = Consensus(Motifs)        # Consensus(Motif) method above
